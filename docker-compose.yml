@@ -1,0 +1,53 @@
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: multipleslider_wordpress
+    restart: always
+    ports:
+      - "9916:80"
+    environment:
+      WORDPRESS_DB_HOST: multipleslider_mysql:3306
+      WORDPRESS_DB_USER: multipleslider_user
+      WORDPRESS_DB_PASSWORD: multipleslider_password
+      WORDPRESS_DB_NAME: multipleslider_db
+    volumes:
+      - ./multipleslider-wordpress:/var/www/html
+    networks:
+      - multipleslider_network
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    container_name: multipleslider_mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: multipleslider_db
+      MYSQL_USER: multipleslider_user
+      MYSQL_PASSWORD: multipleslider_password
+      MYSQL_ROOT_PASSWORD: root_password
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - multipleslider_network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: multipleslider_phpmyadmin
+    restart: always
+    ports:
+      - "9917:80"
+    environment:
+      PMA_HOST: multipleslider_mysql
+      MYSQL_ROOT_PASSWORD: root_password
+    networks:
+      - multipleslider_network
+    depends_on:
+      - mysql
+
+volumes:
+  db_data:
+
+networks:
+  multipleslider_network:
+    driver: bridge
