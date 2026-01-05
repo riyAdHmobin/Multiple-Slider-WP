@@ -1,0 +1,66 @@
+div#accessibility-links button#fr_screenreader_play, 
+div#accessibility-links button#fr_screenreader_pause,
+div#accessibility-links button#fr_screenreader_stop, 
+div#accessibility-links button#fr_screenreader_font_increase,
+div#accessibility-links button#fr_screenreader_font_decrease, 
+div#accessibility-links button#fr_screenreader_font_reset,
+div#accessibility-links button#fr_screenreader_font_family, 
+div#accessibility-links button#fr_screenreader_gray_hues,
+div#accessibility-links button#fr_screenreader_bigcursor, 
+div#accessibility-links button#fr_screenreader_spacing_increase,
+div#accessibility-links button#fr_screenreader_spacing_decrease, 
+div#accessibility-links button#fr_screenreader_highcontrast,
+div#accessibility-links button#fr_screenreader_highcontrast2, 
+div#accessibility-links button#fr_screenreader_highcontrast3,
+div#accessibility-links button#fr_screenreader_skiptocontents, 
+div#accessibility-links button#fr_screenreader_reading_guides,
+div#accessibility-links button#fr_screenreader_readability, 
+div#accessibility-links button#fr_screenreader_hideimages,
+div#accessibility-links button#fr_screenreader_pagezoom_increase, 
+div#accessibility-links button#fr_screenreader_pagezoom_decrease,
+div#accessibility-links button#fr_screenreader_pagezoom_reset {
+	flex-direction: row;
+    padding: 0 0 0 36px;
+    height: 44px;
+    background-position: 8px center !important;
+    background-size: 26px 26px !important;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    white-space: break-spaces;
+}
+
+div.sc-range-base {
+    height: 20px;
+    line-height: 1.7;
+}
+
+div.sc-range-plus,
+div.sc-range-minus {
+    width: 23px;
+    height: 23px;
+}
+
+div.sc-range-minus i.acsbi-chevron_down {
+	height: 18px;
+}
+
+div.sc-section {
+	margin-bottom: 8px;
+	padding: 5px 5px;
+}
+
+div.scfontsizelabel, div.scspacingsizelabel, div.sczoomsizelabel {
+	width: 23px;
+	min-width: 23px;
+    height: 23px;
+	top: -15px;
+	right: -15px;
+	color: #FFF;
+	font-size: 10px;
+}
+
+div.sc-section-title {
+    font-size: 14px;
+    font-weight: 600;
+}
